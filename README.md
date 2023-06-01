@@ -25,6 +25,6 @@ pip install -r requirement.txt
 ```
 
 ## 致谢
-This repository is partly based on LXMERT[https://github.com/airsplay/lxmert#google-drive] and OFA[https://github.com/ofa-sys/ofa] repositories.
+This repository is partly based on [LXMERT](https://github.com/airsplay/lxmert#google-drive) and [OFA](https://github.com/ofa-sys/ofa) repositories.
 
 

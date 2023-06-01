@@ -7,9 +7,7 @@
 - [论文摘要](#论文摘要)
 - [环境配置](#环境配置)
 - [使用说明](#使用说明)
-- [示例代码](#示例代码)
-- [贡献](#贡献)
-- [许可证](#许可证)
+- [致谢](#致谢)
 
 ## 简介
 PyTorch code for ["Bridging the Cross-Modality Semantic Gap in Visual Question Answering"].
@@ -22,6 +20,13 @@ The objective of visual question answering (VQA) is to adequately comprehend a q
 ```bash
 conda create -n CBAC python=3.9
 pip install -r requirement.txt
+```
+## 使用说明
+1.Change the paramenters in \src\param.py
+run:
+```bash
+conda activate CBAC
+python \src\task\vqa.py
 ```
 
 ## 致谢

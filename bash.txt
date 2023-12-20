@@ -1,0 +1,43 @@
+  nohup bash run/vqa_finetune.bash 0 vqa_gener_num2_pool1_shardl_vcls_acls2_adapW_loss0_denselabel \
+  --caption_model True --caption True  --gener_cap True  --shared_l True --caption_sem_type True --cap_num 2 \
+  --sep_token True --accumulation_step 1 \
+  --v_cls  True  --q_global True --con_Loss True --con_alpha 1.0 --l2_alpha 0.2 \
+  --q_num 9 --c_num 5 --v_num 2 --qv_num 5 --cq_num 5 --cv_num 5 --cc_num 5 \
+  --pool_type 1 --mul_class True  --adapW True --a_cls 2  --loss0 True \
+  --guide_dense True \
+  --tiny \
+&
+
+  bash run/vqa_test.bash 0 vqa_gener_num2_pool1_shardl_vcls_acls2_adapW_loss0_denselabel\
+   --caption_model True --caption True  --gener_cap True  --shared_l True --caption_sem_type True --cap_num 2 \
+  --sep_token True --accumulation_step 1 \
+  --v_cls  True  --q_global True --con_Loss False --con_alpha 1.0 --l2_alpha 0.2 \
+  --q_num 9 --c_num 5 --v_num 1 --qv_num 5 --cq_num 2 --cv_num 2 --cc_num 2 \
+  --pool_type 1 --mul_class True  --adapW True --a_cls 2  --loss0 True \
+  --guide_dense True \
+  --test test \
+  --tiny \
+  --load /home/myj2/home_myj/code/lxmert_caption/snap/vqa_gener_num2_pool1_shardl_cls1_vcls_conloss0.3C1.0/BEST \
+
+  2.3
+    bash run/vqa_finetune.bash 0 vqa_gener_num2_pool1_shardl_vcls_denselabel \
+  --caption_model True --caption True  --gener_cap True  --shared_l True --caption_sem_type True --cap_num 2 \
+  --sep_token True --accumulation_step 1 \
+  --v_cls  True  --q_global True --con_Loss False --con_alpha 1.0 --l2_alpha 0.2 \
+  --q_num 9 --c_num 5 --v_num 1 --qv_num 5 --cq_num 2 --cv_num 2 --cc_num 2 \
+  --pool_type -1 --mul_class False  --adapW False --a_cls 1  --loss0 False \
+  --guide_dense True \
+  --tiny \
+
+
+  bash run/vqa_test.bash 0 vqa_gener_num2_pool1_shardl_vcls_denselabel\
+   --caption_model True --caption True  --gener_cap True  --shared_l True --caption_sem_type True --cap_num 2 \
+  --sep_token True --accumulation_step 1 \
+  --v_cls  True  --q_global True --con_Loss False --con_alpha 1.0 --l2_alpha 0.2 \
+  --q_num 9 --c_num 5 --v_num 1 --qv_num 5 --cq_num 2 --cv_num 2 --cc_num 2 \
+  --pool_type 1 --mul_class True  --adapW True --a_cls 2  --loss0 True \
+  --guide_dense True \
+  --test test \
+  --tiny \
+  --load /home/myj2/home_myj/code/lxmert_caption/snap/vqa_gener_num2_pool1_shardl_cls1_vcls_conloss0.3C1.0/BEST \
+
